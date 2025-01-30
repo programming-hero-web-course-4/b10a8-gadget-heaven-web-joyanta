@@ -1,19 +1,31 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
-import Home from "../components/Home/Home";
+import HomeLayout from "../components/HomeLayout/HomeLayout";
 import Banner from "../components/Banner/Banner";
 import Dashboard from "../components/Dashboard/Dashboard";
 import Statistics from "../components/Statistics/Statistics";
+import Gadgets from "../components/Gadgets/Gadgets";
+
 
 const routes = createBrowserRouter([
     {
         path: "/",
-        element: <Home></Home>,
+        element: <HomeLayout></HomeLayout>,
         children: [
             {
                 path: "/",
-                element: <Banner></Banner>
+                element: <Banner></Banner>,
+                children: [
+                    {
+                        path: "/",
+                        element: <Gadgets></Gadgets>,
+                        loader: () => fetch('gadgets.json'),
+                    },
+                ]
+            },
+            {
+                path: "/productDetails/:"
             },
             {
                 path: "/statistics",

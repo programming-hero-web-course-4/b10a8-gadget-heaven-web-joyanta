@@ -1,0 +1,189 @@
+[
+    {
+        "product_id": 10123,
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/ccVSnyyz/Dell-XPS-15.jpg",
+        "category": "Laptops",
+        "price": 1500,
+        "description": "A high-performance laptop with a stunning display and powerful internals.",
+        "Specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "NVIDIA GTX 1650"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 20478,
+        "product_title": "MacBook Pro 14",
+        "product_image": "https://i.ibb.co.com/8D25xhjx/3710-54354.jpg",
+        "category": "Laptops",
+        "price": 2000,
+        "description": "Apple's latest MacBook Pro with M2 chip and stunning Retina display.",
+        "Specification": [
+            "Apple M2 Chip",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch Liquid Retina XDR"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 30956,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/p6G3k8C4/HP-Spectre-x360-Convertible-14-EF2013-DX-a-1801.jpg",
+        "category": "Laptops",
+        "price": 1400,
+        "description": "A premium 2-in-1 convertible laptop with a sleek design.",
+        "Specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "1TB SSD",
+            "OLED Touchscreen"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": 45782,
+        "product_title": "Lenovo ThinkPad X1",
+        "product_image": "https://i.ibb.co.com/zWBHJ5nk/Lenovo-Think-Pad-X1-Carbon-Gen-10-1127.jpg",
+        "category": "Laptops",
+        "price": 1600,
+        "description": "A business-class laptop with excellent durability and performance.",
+        "Specification": [
+            "Intel Core i7",
+            "32GB RAM",
+            "1TB SSD",
+            "14-inch 4K Display"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 57890,
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.ibb.co.com/XZXLwVSY/Samsung-Galaxy-S23.jpg",
+        "category": "Phones",
+        "price": 1000,
+        "description": "A flagship Android smartphone with top-tier camera and performance.",
+        "Specification": [
+            "Snapdragon 8 Gen 2",
+            "12GB RAM",
+            "256GB Storage",
+            "6.8-inch Dynamic AMOLED"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 62134,
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co.com/BVq415vL/Pixel-7-Snow-9770.jpg",
+        "category": "Phones",
+        "price": 900,
+        "description": "Google's latest Pixel phone with AI-powered camera features.",
+        "Specification": [
+            "Google Tensor G2",
+            "8GB RAM",
+            "128GB Storage",
+            "6.3-inch OLED Display"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": 70981,
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/nsQr3vcJ/One-Plus-11.png",
+        "category": "Phones",
+        "price": 850,
+        "description": "A powerful Android smartphone with fast charging and smooth performance.",
+        "Specification": [
+            "Snapdragon 8 Gen 2",
+            "16GB RAM",
+            "512GB Storage",
+            "6.7-inch Fluid AMOLED"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 83245,
+        "product_title": "Logitech MX Master 3",
+        "product_image": "https://i.ibb.co.com/398p2J5Q/Logitech-MX-Master-3.jpg",
+        "category": "Accessories",
+        "price": 100,
+        "description": "An advanced wireless mouse with ergonomic design and long battery life.",
+        "Specification": [
+            "Ergonomic Design",
+            "Bluetooth & USB",
+            "70-day Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 91673,
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/jkbj97BL/5318-55349.jpg",
+        "category": "Accessories",
+        "price": 350,
+        "description": "Industry-leading noise-canceling wireless headphones.",
+        "Specification": [
+            "Active Noise Cancelling",
+            "30-hour Battery Life",
+            "Hi-Res Audio"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 102984,
+        "product_title": "Anker PowerCore 20K",
+        "product_image": "https://i.ibb.co.com/xq9b3GPk/Anker-Power-Core-20-K.png",
+        "category": "Accessories",
+        "price": 50,
+        "description": "A high-capacity power bank with fast charging capabilities.",
+        "Specification": [
+            "20000mAh Capacity",
+            "USB-C & USB-A Ports",
+            "PD Fast Charging"
+        ],
+        "availability": false,
+        "rating": 4.5
+    },
+    {
+        "product_id": 111456,
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/xS3zH3Cz/i-Phone-14-Pro-Deep-Purple-7300.jpg",
+        "category": "iPhone",
+        "price": 1200,
+        "description": "Apple's premium smartphone with ProMotion and advanced camera features.",
+        "Specification": [
+            "A16 Bionic Chip",
+            "128GB Storage",
+            "6.1-inch Super Retina XDR"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 125678,
+        "product_title": "iPhone 15 Pro Max",
+        "product_image": "https://i.ibb.co.com/x8RgSBp3/i-Phone-15-Pro-Max.jpg",
+        "category": "iPhone",
+        "price": 1500,
+        "description": "The most advanced iPhone with a titanium frame and periscope zoom camera.",
+        "Specification": [
+            "A17 Pro Chip",
+            "256GB Storage",
+            "6.7-inch Super Retina XDR"
+        ],
+        "availability": false,
+        "rating": 5.0
+    }
+]

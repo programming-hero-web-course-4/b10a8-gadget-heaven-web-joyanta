@@ -3,10 +3,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-body{
+body {
     font-family: "Sora", serif;
 }
-.active{
-    text-decoration: underline;
-}
 
+.active {
+    @apply font-bold text-black underline;
+  }
