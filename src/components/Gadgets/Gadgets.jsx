@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Gadget from "./Gadget/Gadget";
 
 const Gadgets = () => {
     const gadgets = useLoaderData();
-    const [filteredGadgets, setFilteredGadgets] = useState(gadgets);
+    const [filteredGadgets, setFilteredGadgets] = useState([]);
     const [activeCategory, setActiveCategory] = useState('All');
+
+    useEffect(() => {
+        setFilteredGadgets(gadgets);
+    }, [gadgets]);
 
     const sortGadgets = (category) => {
         setActiveCategory(category);

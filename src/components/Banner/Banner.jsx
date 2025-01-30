@@ -14,11 +14,9 @@ const Banner = () => {
                         <img className="w-[1280px] h-[200px] lg:h-[400px] rounded-lg" src="/src/assets/banner.jpg" alt="" />
                     </div>
                 </div>
-
             </div>
             <Outlet></Outlet>
         </div>
-
     );
 };
 
