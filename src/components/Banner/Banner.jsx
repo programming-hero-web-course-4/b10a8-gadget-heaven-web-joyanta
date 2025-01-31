@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
-import bannerImg from "../../assets/banner.jpg";
-
+import bannerImage from "../../assets/banner.jpg";
 const Banner = () => {
     return (
         <div>
@@ -12,7 +11,7 @@ const Banner = () => {
                 </div>
                 <div className="absolute flex justify-center left-0 right-0 -bottom-30 lg:-bottom-60 px-5">
                     <div className=" bg-[#FFFFFF4D] p-3 border-2 border-white rounded-lg ">
-                        <img className="w-[1280px] h-[200px] lg:h-[400px] rounded-lg" src={bannerImg} alt="" />
+                        <img className="w-[1280px] h-[200px] lg:h-[400px] rounded-lg" src={bannerImage} alt="banner image" />
                     </div>
                 </div>
             </div>

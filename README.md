@@ -4,7 +4,7 @@ Welcome to Gadget Heaven, a modern e-commerce platform for exploring and purchas
 
 ## Live Website
 
-[Live Website Link](https://your-live-website-link.com)
+[Live Website Link](https://gadget-heaven-joyanta-a8.netlify.app/)
 
 ## Requirement Document
 
