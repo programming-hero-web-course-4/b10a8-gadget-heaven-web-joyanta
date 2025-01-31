@@ -32,17 +32,26 @@ const Cart = () => {
         localStorage.removeItem('cartItems');
     };
 
+    const handleDelete = (productId) => {
+        const updatedItems = cartItems.filter(item => item.product_id !== productId);
+        setCartItems(updatedItems);
+        localStorage.setItem('cartItems', JSON.stringify(updatedItems));
+        calculateTotalPrice(updatedItems);
+    };
+
     return (
         <div className="min-h-screen py-10">
-            <div className="max-w-5xl mx-auto p-6">
-                <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-3xl font-bold mb-6">Cart</h2>
-                    <div className="space-x-4">
-                        <span className="text-2xl font-bold">Total cost: ${totalPrice.toFixed(2)}</span>
+            <div className="max-w-7xl mx-auto flex justify-between items-center px-5 mb-6">
+                <h2 className="text-3xl font-bold mb-6">Cart</h2>
+                <div className="flex flex-col md:flex-row items-center gap-3">
+                    <span className="text-2xl font-bold">Total cost: ${totalPrice.toFixed(2)}</span>
+                    <div className="space-x-3">
                         <button onClick={sortByPrice} className="btn border border-[#9538E2] text-[#9538E2] rounded-4xl">Sort by Price <RiSoundModuleFill /></button>
                         <button onClick={handlePurchase} className="btn bg-[#9538E2] text-[#fff] rounded-4xl">Purchase</button>
                     </div>
                 </div>
+            </div>
+            <div className="max-w-5xl mx-auto p-6">
                 <div className="mb-6">
                     {cartItems.length > 0 ? (
                         cartItems.map((item, index) => (
@@ -51,11 +60,11 @@ const Cart = () => {
                                 <div className="flex flex-col justify-between">
                                     <div>
                                         <h1 className="text-3xl font-bold mb-4">{item.product_title}</h1>
-                                        <p className="mb-4">{item.description}</p>  
+                                        <p className="mb-4">{item.description}</p>
                                         <p className="text-xl mb-4">Price: ${item.price}</p>
                                     </div>
                                 </div>
-                                <div className="text-4xl text-[#FF0000] absolute right-10 top-10"><IoIosCloseCircleOutline /></div>
+                                <div className="text-4xl btn-2xl text-[#FF0000] absolute right-10 top-8 rounded-full" onClick={() => handleDelete(item.product_id)}><IoIosCloseCircleOutline /></div>
                             </div>
                         ))
                     ) : (
