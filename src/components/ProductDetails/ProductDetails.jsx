@@ -1,16 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { PiShoppingCart } from "react-icons/pi";
+import { FaRegHeart } from "react-icons/fa";
+import { addToCart, addToWishlist } from "../../utils/localStorageUtils";
 
 const ProductDetails = () => {
     const products = useLoaderData();
     const { productId } = useParams();
     const product = products.find(gadget => gadget.product_id === parseInt(productId));
     const { product_image, product_title, price, description, Specification, rating, availability } = product;
-
-    const addToCart = (item) => {
-        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItems.push(item);
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    };
 
     return (
         <div className="bg-[#9538E2] py-10 relative mb-96">
@@ -35,8 +32,11 @@ const ProductDetails = () => {
                             </ul>
                             <p className="text-lg font-semibold">Rating: {rating}</p>
                         </div>
-                        <div className="flex items-center justify-between mt-4">
-                            <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-4xl py-2 px-4">Add to Cart</button>
+                        <div className="flex items-center gap-4 mt-4">
+                            <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-4xl py-2 px-4">Add to Cart <PiShoppingCart className="w-5 h-5" /> </button>
+                            <button onClick={() => addToWishlist(product)} className="bg-white btn p-2 border border-[#0B0B0B1A] rounded-full">
+                                <FaRegHeart className="w-5 h-5" />
+                            </button>
                         </div>
                     </div>
                 </div>

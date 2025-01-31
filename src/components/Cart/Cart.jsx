@@ -46,8 +46,8 @@ const Cart = () => {
                 <div className="flex flex-col md:flex-row items-center gap-3">
                     <span className="text-2xl font-bold">Total cost: ${totalPrice.toFixed(2)}</span>
                     <div className="space-x-3">
-                        <button onClick={sortByPrice} className="btn border border-[#9538E2] text-[#9538E2] rounded-4xl">Sort by Price <RiSoundModuleFill /></button>
-                        <button onClick={handlePurchase} className="btn bg-[#9538E2] text-[#fff] rounded-4xl">Purchase</button>
+                        <button onClick={sortByPrice} className="btn border border-[#9538E2] text-[#9538E2] rounded-4xl" disabled={cartItems.length === 0}>Sort by Price <RiSoundModuleFill /></button>
+                        <button onClick={handlePurchase} className="btn bg-[#9538E2] text-[#fff] rounded-4xl" disabled={cartItems.length === 0}>Purchase</button>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,10 @@ const Cart = () => {
                 </div>
                 {showModal && (
                     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div className="bg-white p-6 rounded-lg shadow-lg text-center mx-auto">
+                            <img src="/src/assets/Group.png" alt="" className="mx-auto mb-4" />
                             <h2 className="text-2xl font-bold mb-4">Payment Successfully</h2>
+                            <p className="text-lg">Thanks for purchasing.</p>
                             <p className="text-lg mb-4">Total cost: ${previousTotalPrice.toFixed(2)}</p>
                             <button onClick={() => setShowModal(false)} className="btn bg-[#9538E2] text-[#fff] rounded-4xl">Close</button>
                         </div>
