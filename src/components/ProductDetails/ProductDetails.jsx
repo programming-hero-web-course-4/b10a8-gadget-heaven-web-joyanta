@@ -3,6 +3,7 @@ import { PiShoppingCart } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { addToCart, addToWishlist } from "../../utils/localStorageUtils";
 
+
 const ProductDetails = () => {
     const products = useLoaderData();
     const { productId } = useParams();

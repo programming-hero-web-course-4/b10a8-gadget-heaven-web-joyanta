@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { RiSoundModuleFill } from "react-icons/ri";
+import { toast } from "react-toastify";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -37,6 +38,7 @@ const Cart = () => {
         setCartItems(updatedItems);
         localStorage.setItem('cartItems', JSON.stringify(updatedItems));
         calculateTotalPrice(updatedItems);
+        toast.error('product removed from cart');
     };
 
     return (

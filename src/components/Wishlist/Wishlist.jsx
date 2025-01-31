@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { getWishlistItems } from "../../utils/localStorageUtils";
+import { toast } from "react-toastify";
 
 const Wishlist = () => {
     const [wishlistItems, setWishlistItems] = useState([]);
@@ -14,6 +15,7 @@ const Wishlist = () => {
         const updatedItems = wishlistItems.filter(item => item.product_id !== productId);
         setWishlistItems(updatedItems);
         localStorage.setItem('wishlistItems', JSON.stringify(updatedItems));
+        toast.error('product removed from wishlist');
     };
 
     return (
