@@ -42,7 +42,7 @@ const Cart = () => {
     };
 
     return (
-        <div className="min-h-screen py-10">
+        <div className="py-10">
             <div className="max-w-7xl mx-auto flex justify-between items-center px-5 mb-6">
                 <h2 className="text-3xl font-bold mb-6">Cart</h2>
                 <div className="flex flex-col md:flex-row items-center gap-3">

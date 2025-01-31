@@ -19,7 +19,7 @@ const Wishlist = () => {
     };
 
     return (
-        <div className="min-h-screen py-10">
+        <div className="py-10">
             <div className="max-w-5xl mx-auto p-6">
                 <h2 className="text-3xl font-bold mb-6">Wishlist</h2>
                 <div className="mb-6">
