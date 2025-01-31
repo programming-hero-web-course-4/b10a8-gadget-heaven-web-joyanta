@@ -9,7 +9,7 @@ const Navbar = () => {
     const [linkColor, setLinkColor] = useState('text-white');
 
     useEffect(() => {
-        if (location.pathname.startsWith('/productDetails')) {
+        if (location.pathname.startsWith('/productDetails') || location.pathname.startsWith('/dashboard') || location.pathname.startsWith('/statistics')) {
             setBgColor('white');
             setLinkColor('text-[#000]');
         } else {
@@ -17,6 +17,12 @@ const Navbar = () => {
             setLinkColor('text-white');
         }
     }, [location]);
+
+    const navLinks = [
+        { to: '/', label: 'Home' },
+        { to: '/statistics', label: 'Statistics' },
+        { to: '/dashboard', label: 'Dashboard' },
+    ];
 
     return (
         <div>
@@ -29,18 +35,18 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu bg-[#9538E2] menu-sm dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <NavLink to='/' className={linkColor}>Home</NavLink>
-                            <NavLink to='/statistics' className={linkColor}>Statistics</NavLink>
-                            <NavLink to='/dashboard' className={linkColor}>Dashboard</NavLink>
+                            {navLinks.map(link => (
+                                <NavLink key={link.to} to={link.to} className={linkColor}>{link.label}</NavLink>
+                            ))}
                         </ul>
                     </div>
                     <Link to='/' className={`text-md md:text-xl font-bold ${linkColor}`}>Gadget Heaven</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className={`menu menu-horizontal px-1 font-medium space-x-12 ${linkColor}`}>
-                        <NavLink to='/' className={linkColor}>Home</NavLink>
-                        <NavLink to='/statistics' className={linkColor}>Statistics</NavLink>
-                        <NavLink to='/dashboard' className={linkColor}>Dashboard</NavLink>
+                        {navLinks.map(link => (
+                            <NavLink key={link.to} to={link.to} className={linkColor}>{link.label}</NavLink>
+                        ))}
                     </ul>
                 </div>
                 <div className="navbar-end space-x-2.5">

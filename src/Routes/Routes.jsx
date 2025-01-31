@@ -8,12 +8,13 @@ import Statistics from "../components/Statistics/Statistics";
 import Gadgets from "../components/Gadgets/Gadgets";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
+import Cart from "../components/Cart/Cart";
+import Wishlist from "../components/Wishlist/Wishlist";
 
 const routes = createBrowserRouter([
     {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        errorElement: <ErrorBoundary />,
         children: [
             {
                 path: "/",
@@ -37,9 +38,20 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/dashboard",
-                element: <Dashboard></Dashboard>
+                element: <Dashboard></Dashboard>,
+                children: [
+                    {
+                        path: "",
+                        element: <Cart></Cart>
+                    },
+                    {
+                        path: "wishlist",
+                        element: <Wishlist></Wishlist>
+                    }
+                ],
             },
         ],
+        errorElement: <ErrorBoundary />,
     },
 ]);
 

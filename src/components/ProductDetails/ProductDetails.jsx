@@ -6,6 +6,12 @@ const ProductDetails = () => {
     const product = products.find(gadget => gadget.product_id === parseInt(productId));
     const { product_image, product_title, price, description, Specification, rating, availability } = product;
 
+    const addToCart = (item) => {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    };
+
     return (
         <div className="bg-[#9538E2] py-10 relative mb-96">
             <div className="text-center pb-30">
@@ -30,7 +36,7 @@ const ProductDetails = () => {
                             <p className="text-lg font-semibold">Rating: {rating}</p>
                         </div>
                         <div className="flex items-center justify-between mt-4">
-                            <button className="btn bg-[#9538E2] text-white rounded-4xl py-2 px-4">Add to Cart</button>
+                            <button onClick={() => addToCart(product)} className="btn bg-[#9538E2] text-white rounded-4xl py-2 px-4">Add to Cart</button>
                         </div>
                     </div>
                 </div>
