@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Gadget from "./Gadget/Gadget";
+import { Helmet } from "react-helmet-async";
 
 const Gadgets = () => {
     const gadgets = useLoaderData();
@@ -27,6 +28,9 @@ const Gadgets = () => {
 
     return (
         <div className="px-5">
+            <Helmet>
+                <title>Gadgets | Gadget Heaven</title>
+            </Helmet>
             <h1 className="text-4xl font-bold text-center pb-12">Explore Cutting-Edge Gadgets</h1>
             <div className="flex flex-col md:flex-row justify-center space-x-6 mb-24">
                 <div className="flex md:flex-col flex-wrap border border-[#09080F1A] rounded-box justify-center md:justify-normal w-auto md:w-56 space-y-6 px-8 py-6 mx-auto md:mx-6 mb-6 md:mb-0">

@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
     const location = useLocation();
@@ -18,7 +19,11 @@ const Dashboard = () => {
     };
 
     return (
+        
         <div>
+            <Helmet>
+                <title>Dashboard | Gadget Heaven</title>
+            </Helmet>
             <div className="bg-[#9538E2] py-10 mx-7.5">
                 <div className="text-center pb-30">
                     <h4 className="text-3xl font-bold text-white pb-2">Dashboard</h4>
